@@ -29,9 +29,13 @@ function weatherCardList(cards) {
             .map((card) => {
                return `<div class="weather-card">
         <h1>${card.name}</h1>
+        <img id="wicon"  src=" https://openweathermap.org/img/wn/${card.weather[0].icon}@2x.png" alt="icon">
           <div class="info">
     <p class="info-item">
    temp ${Math.round(card.main.temp / 10)}
+    </p>
+    <p class="info-item">
+   description ${card.weather[0].description}
     </p>
      <p class="info-item">
    wind speed ${card.wind.speed} m/c
