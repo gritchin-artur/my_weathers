@@ -23,27 +23,25 @@ buttonSearch.addEventListener('click', (event) => {
 })
 
 
+
 function weatherCardList(cards) {
   console.log(cards)
-        const markup = cards.list
-            .map((card) => {
-               return `<div class="weather-card">
-        <h1>${card.name}</h1>
-        <img id="wicon"  src=" https://openweathermap.org/img/wn/${card.weather[0].icon}@2x.png" alt="icon">
+        const markup = 
+               `<div class="weather-card">
+        <h1>${cards.name}</h1>
+        <img id="wicon"  src=" https://openweathermap.org/img/wn/${cards.weather[0].icon}@2x.png" alt="icon">
           <div class="info">
     <p class="info-item">
-   temp ${Math.round(card.main.temp / 10)}
+   temp ${Math.round(cards.main.temp)}° С
     </p>
     <p class="info-item">
-   description ${card.weather[0].description}
+   description ${cards.weather[0].description}
     </p>
      <p class="info-item">
-   wind speed ${card.wind.speed} m/c
+   wind speed ${cards.wind.speed} m/c
     </p>
     </p>
   </div>      
-</div>`;
-    })
-          .join("");
-    div.insertAdjacentHTML("beforeend", markup);
+</div>`
+  div.innerHTML = markup;
 };
