@@ -11,8 +11,9 @@ buttonSearch.addEventListener('click', (event) => {
     event.preventDefault();
     console.log(inputSearch.value.trim().toLowerCase());
    let country = inputSearch.value.trim().toLowerCase();
-    fetchGalaryWeather(country)
-        .then((cards) => {
+  fetchGalaryWeather(country)
+    .then((cards) => {
+          console.log(cards)
             // div.innerHTML = '';
           weatherCardList(cards);
                Notify.success(`✅ Hooray! We found city`);
