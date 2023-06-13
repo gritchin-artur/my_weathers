@@ -10,7 +10,7 @@ const buttonSearch = document.querySelector('.find-weather')
 buttonSearch.addEventListener('click', (event) => {
     event.preventDefault();
     console.log(inputSearch.value.trim().toLowerCase());
-    country = inputSearch.value.trim().toLowerCase();
+   let country = inputSearch.value.trim().toLowerCase();
     fetchGalaryWeather(country)
         .then((cards) => {
             div.innerHTML = '';
