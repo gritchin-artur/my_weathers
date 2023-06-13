@@ -5,7 +5,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export async function fetchGalaryWeather(country) {
 const KEY = '5767a08f23978378cf4f185e72cfa13f';
-const URL = 'http://api.openweathermap.org/data/2.5/weather?units=metric&';
+const URL = 'https://api.openweathermap.org/data/2.5/weather?units=metric&';
     try {
         const response = await axios.get(
             `${URL}q=${country}&appid=${KEY}`
