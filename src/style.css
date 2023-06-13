@@ -110,7 +110,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
-    /* background-image: url(https:w.forfun.com/fetch/47/47c1334a630f28b895b40e614b6c507a.jpeg); */
+    background-image: url();
 }
 
 .search-input {
