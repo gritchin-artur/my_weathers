@@ -10,11 +10,10 @@ const buttonSearch = document.querySelector('.find-weather')
 buttonSearch.addEventListener('click', (event) => {
     event.preventDefault();
     console.log(inputSearch.value.trim().toLowerCase());
-   let country = inputSearch.value.trim().toLowerCase();
+   let country = inputSearch.value.trim();
   fetchGalaryWeather(country)
     .then((cards) => {
-          console.log(cards)
-            // div.innerHTML = '';
+            div.innerHTML = '';
           weatherCardList(cards);
                Notify.success(`✅ Hooray! We found city`);
     })
