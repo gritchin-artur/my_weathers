@@ -13,8 +13,8 @@ buttonSearch.addEventListener('click', (event) => {
    let country = inputSearch.value.trim().toLowerCase();
     fetchGalaryWeather(country)
         .then((cards) => {
-            div.innerHTML = '';
-            weatherCardList(cards)
+            // div.innerHTML = '';
+          weatherCardList(cards);
                Notify.success(`✅ Hooray! We found city`);
     })
         .catch((error) => {
@@ -26,7 +26,7 @@ buttonSearch.addEventListener('click', (event) => {
 
 function weatherCardList(cards) {
   console.log(cards)
-        const markup = 
+        let markup = 
                `<div class="weather-card">
         <h1>${cards.name}</h1>
         <img id="wicon"  src=" https://openweathermap.org/img/wn/${cards.weather[0].icon}@2x.png" alt="icon">
